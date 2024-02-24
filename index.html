@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC BUSAN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff9f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #ff6600;
+            margin: 20px 0;
+        }
+
+        .spacer {
+            margin: 1rem 0;
+            background-color: transparent;
+        }
+
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        nav a {
+            margin-left: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .countdown {
+            font-size: 2rem;
+            color: #ff6600;
+        }
+
+        .important {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #222222;
+            margin-top: 20px;
+        }
+
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 20px auto;
+            /* Updated */
+            max-width: 600px;
+            text-align: center;
+            /* Added */
+        }
+
+
+        .event {
+            display: flex;
+            margin-bottom: 20px;
+            border: 1px solid #ff6600;
+        }
+
+        .timestamp {
+            flex: 0 0 100px;
+            text-align: right;
+            padding-right: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            /* Center vertically */
+        }
+
+        .content {
+            flex: 1;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .description {
+            line-height: 1.5; /* Adjust line height as needed */
+            margin-top: 10px; /* Add margin to the top */
+            margin-bottom: 10px; /* Add margin to the bottom */
+            padding: 5px; /* Add padding */
+        }
+
+
+        .rainbow {
+            animation: rainbowAnimation 4s linear infinite;
+        }
+        
+        @keyframes rainbowAnimation {
+            0% {
+                color: #ff0000; /* Red */
+            }
+        
+            20% {
+                color: #ff7f00; /* Orange */
+            }
+        
+            40% {
+                color: #ffff00; /* Yellow */
+            }
+        
+            60% {
+                color: #00ff00; /* Green */
+            }
+        
+            80% {
+                color: #0000ff; /* Blue */
+            }
+        
+            100% {
+                color: #8a2be2; /* Indigo */
+            }
+        }
+        
+
+        
+        .rainbow-bg {
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 1500% 1500%;
+            animation: rainbowAnimation-bg 10s linear infinite;
+        }
+
+        .rainbow-bg-reverse {
+            background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+            background-size: 1500% 1500%;
+            animation: rainbowAnimation-bg 10s linear infinite;
+        }
+        
+        @keyframes rainbowAnimation-bg {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .action-button {
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
+            border: 2px solid #ffa76c;
+            border-radius: 5px;
+            transition: background-color 0.5s ease, border-color 0.5s ease;
+            /* Add transition for background and border color */
+        }
+
+        .action-button:hover {
+            color: white;
+            background-color: #ff6363;
+            border-color: #ff6363;
+            text-decoration: none;
+        }
+
+        .language-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-button:hover {
+            background-color: #0056b3;
+        }
+
+
+        .sponsor-info {
+            font-size: 20px;
+            color: #555;
+        }
+
+        .sponsor-info a {
+            text-decoration: none;
+            /* Remove underline decoration */
+        }
+
+        .btn-orange-outline {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #ff6600;
+            text-decoration: none;
+            border: 2px solid #ff6600;
+            border-radius: 5px;
+            transition: background-color 0.5s ease, border-color 0.5s ease;
+            /* Add transition for background and border color */
+        }
+
+        .btn-orange-outline:hover {
+            color: white;
+            background-color: #ff6600;
+            border-color: #ffa76c;
+            text-decoration: none;
+        }
+
+        .btn-orange-outline-sm {
+            font-size: 1rem;
+            font-weight: 700;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: #ff6600;
+            text-decoration: none;
+            border: 2px solid #ff6600;
+            border-radius: 5px;
+            transition: background-color 0.5s ease, border-color 0.5s ease;
+            /* Add transition for background and border color */
+        }
+
+        .btn-orange-outline-sm:hover {
+            color: white;
+            background-color: #ff6600;
+            border-color: #ffa76c;
+            /* Adjust border color on hover */
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <span class="logo lang" id="FCC"></span>
+        <div class="countdown" id="countdown">Time to Event</div>
+        <hr>
+        <h2 class="lang important" id="event-date"></h2>
+        <h2 class="lang important" id="event-time"></h2>
+
+        <a class="lang btn-orange-outline" id="event-place" href="https://place.map.kakao.com/1733944595"></a>
+
+        <hr>
+
+        <nav>
+            <hr class="spacer">
+            <a class="lang btn-orange-outline-sm" id="facebook"
+                href="https://www.facebook.com/groups/free.code.camp.busan/"></a>
+
+            <a class="lang action-button" id="register" href="https://forms.gle/6Yrgve6GKxqc853AA"></a>
+
+            <hr class="spacer">
+
+            <button class="language-button" onclick="changeLanguage('en')">English</button>
+            <button class="language-button" onclick="changeLanguage('ko')">한국어</button>
+            <button onclick="applyRainbow()" style="position: fixed; bottom: 20px; right: 20px;">&#127752;</button>
+
+            <hr class="spacer">
+
+        </nav>
+        <a class="lang sponsor-info" id="sponsor-1" href="http://www.bfic.kr/intro.asp"></a>
+    </header>
+    <main>
+        <div class="timeline">
+            <div class="lang countdown" id="timeline-title"></div>
+            <hr>
+            <div class="event">
+                <div class="timestamp">3:00 PM</div>
+                <div class="content">
+                    <div class="title lang" id="event-start"></div>
+                    <span class="description lang" id="event-1"></span>
+                </div>
+            </div>
+            <div class="event">
+                <div class="timestamp">04:00 AM</div>
+                <div class="content">
+                    <div class="title lang" id="event-mid"></div>
+                    <div class="description lang" id="event-2"></div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="timestamp">05:30 AM</div>
+                <div class="content">
+                    <div class="title lang" id="event-end"></div>
+                    <div class="description lang" id="event-3"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Define your dictionary of translations
+        var translations = {
+            'en': {
+                'FCC': 'FCC BUSAN',
+                'hello': 'Hello',
+                'welcome': 'Welcome',
+                'facebook': 'Facebook Page',
+                'register': 'Event Registration',
+                'event-date': 'Next Event: April 7',
+                'event-time': '3PM - 6PM',
+                'event-place': 'CAFE WITH Culture',
+                'sponsor-1': 'Sponsor: Busan Global City Foundation',
+                'timeline-title':'Timeline',
+                'event-start':'Event Starts!',
+                'event-1':"Join us for a casual meet and greet over freshly brewed coffee (free coffee!). Bring your laptop. It's the perfect opportunity to connect with new friends and network in a relaxed setting.",
+                'event-mid':'Hackathon preparations',
+                'event-2':'Submit and vote on ideas for the next hackathon, and form teams!',
+                'event-end':'Wrap-up!',
+                'event-3':'Key-Notes for upcoming hackathon, pictures, thanks to sponsors, general notes.',
+            },
+            'ko': {
+                'FCC': 'FCC 부산',
+                'hello': '안녕하세요',
+                'welcome': '환영합니다',
+                'facebook': '페이스북 페이지',
+                'register': '이벤트 등록하기',
+                'event-date': '다음 이벤트: 4월 7일',
+                'event-time': '오후 3시~오후 6시',
+                'event-place': '카페위드',
+                'sponsor-1': '스폰서: 부산글로벌도시재단',
+                'timeline-title':'시간표',
+                'event-start':'이벤트가 시작됩니다!',
+                'event-1':'갓 내린 커피(무료 커피!)를 마시며 캐주얼한 만남과 인사를 나누세요. 노트북을 가져오세요. 편안한 분위기에서 새로운 친구들과 교류하고 인맥을 쌓을 수 있는 완벽한 기회입니다.',
+                'event-mid':'해커톤 준비하기',
+                'event-2':'이디어를 제출하고 투표하고 다음 해커톤에 참가할 팀을 구성하세요!',
+                'event-end':'이벤트 종료 노트',
+                'event-3':'다가오는 해커톤의 키노트, 사진, 후원사에 대한 감사 인사, 일반 참고 사항.',
+                
+            }
+        };
+
+        // Set the countdown date (in UTC milliseconds)
+        const countdownDate = new Date("2024-04-07T00:00:00Z").getTime();
+
+        // Update the countdown every second
+        const countdown = setInterval(function () {
+            // Get today's date and time (in UTC milliseconds)
+            const now = new Date().getTime();
+
+            // Calculate the time remaining
+            const distance = countdownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown
+            document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML = "COMPLETED";
+            }
+        }, 1000);
+
+
+        function changeLanguage(lang) {
+            // Get all elements with class 'lang'
+            var elements = document.querySelectorAll('.lang');
+
+            // Iterate over each element
+            elements.forEach(function (element) {
+                // Get the id
+                var id = element.getAttribute('id');
+
+                // Get the translated text from the dictionary based on the selected language and id
+                var translatedText = translations[lang][id];
+
+                // Set the translated text as the new content
+                if (translatedText) {
+                    element.textContent = translatedText;
+                }
+            });
+        }
+        // Call changeLanguage('en') when the page loads to set English content by default
+        window.onload = function () {
+            changeLanguage('en');
+        };
+        function applyRainbow() {
+            var elements = document.querySelectorAll('.lang');
+            elements.forEach(function (element) {
+                element.classList.add('rainbow');
+                element.textContent = '01100011 01101100 00110001 01110000 00101110 01101110 01100101 01110100 00101111 01100110 01100011 01100011 01100010';
+            });
+            var elements = document.querySelectorAll('.event');
+            elements.forEach(function (element) {
+                element.classList.add('rainbow');
+                element.classList.add('rainbow-bg-reverse');
+            });
+            
+            var elements = document.querySelectorAll('.content');
+            elements.forEach(function (element) {
+                element.classList.add('rainbow-bg-reverse');
+            });
+
+            document.querySelector('header').classList.add('rainbow-bg-reverse');
+            
+            document.body.classList.add('rainbow-bg');
+        }
+
+
+    </script>
+
+</body>
+
+</html>
