@@ -5,22 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="FCC BUSAN">
-    <meta property="og:description" content="Join us for free coffee, monthly hackathons. Connect with new friends and network in a relaxed setting.">
-    <meta property="og:image" content="https://social.hays.com/wp-content/uploads/2017/07/00921_RGB_Digital-e1499698934535.jpg"> 
+    <meta property="og:description"
+        content="Join us for free coffee, monthly hackathons. Connect with new friends and network in a relaxed setting.">
+    <meta property="og:image"
+        content="https://social.hays.com/wp-content/uploads/2017/07/00921_RGB_Digital-e1499698934535.jpg">
     <meta property="og:url" content="https://fredericgariepy.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    
+
     <title>FCC BUSAN</title>
     <style>
         /* Define custom colors as CSS variables */
         :root {
-            --primary-color: #ff6600; /* Orange */
-            --secondary-color: #ffffff; /* White */
-            --accent-color: #ffa76c; /* Light Orange */
-            --text-color: #333333; /* Dark Gray */
-            --background-color: #fff9f4; /* Light Peach */
-            --border-color: #ff6600; /* Orange */
+            --primary-color: #ff6600;
+            /* Orange */
+            --secondary-color: #ffffff;
+            /* White */
+            --accent-color: #ffa76c;
+            /* Light Orange */
+            --text-color: #333333;
+            /* Dark Gray */
+            --background-color: #fff9f4;
+            /* Light Peach */
+            --border-color: #ff6600;
+            /* Orange */
         }
 
         body {
@@ -138,27 +146,33 @@
 
         @keyframes rainbowAnimation {
             0% {
-                color: #ff0000; /* Red */
+                color: #ff0000;
+                /* Red */
             }
 
             20% {
-                color: #ff7f00; /* Orange */
+                color: #ff7f00;
+                /* Orange */
             }
 
             40% {
-                color: #ffff00; /* Yellow */
+                color: #ffff00;
+                /* Yellow */
             }
 
             60% {
-                color: #00ff00; /* Green */
+                color: #00ff00;
+                /* Green */
             }
 
             80% {
-                color: #0000ff; /* Blue */
+                color: #0000ff;
+                /* Blue */
             }
 
             100% {
-                color: #8a2be2; /* Indigo */
+                color: #8a2be2;
+                /* Indigo */
             }
         }
 
@@ -192,7 +206,6 @@
             background-color: var(--primary-color);
             color: var(--secondary-color);
             text-decoration: none;
-            margin-top: 1.5rem;
             border: 2px solid var(--accent-color);
             border-radius: 5px;
             transition: background-color 0.5s ease, border-color 0.5s ease;
@@ -268,6 +281,20 @@
             background-color: var(--primary-color);
             border-color: var(--accent-color);
         }
+
+        .register-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+        .promo-coffee{
+            color: grey;
+            font-size: small;
+            margin-bottom: 5px;
+        }
+    
+        
     </style>
 
 </head>
@@ -288,8 +315,11 @@
             <hr class="spacer">
             <a class="lang btn-orange-outline-sm" id="facebook"
                 href="https://www.facebook.com/groups/free.code.camp.busan/"></a>
-
-            <a class="lang action-button" id="register" href="https://forms.gle/6Yrgve6GKxqc853AA"></a>
+                
+                <div class="register-div">
+                    <span class="lang promo-coffee" id="promo-coffee"><span>&#9749;</span></span>
+                    <a class="lang action-button" id="register" href="https://forms.gle/6Yrgve6GKxqc853AA"></a>
+                </div>
 
             <hr class="spacer">
 
@@ -331,6 +361,7 @@
 
     </main>
 
+
     <script>
         // Define your dictionary of translations
         var translations = {
@@ -344,13 +375,14 @@
                 'event-time': '3PM - 6PM',
                 'event-place': 'CAFE WITH Culture',
                 'sponsor-1': 'Sponsor: Busan Global City Foundation',
-                'timeline-title':'Timeline',
-                'event-start':'Event Starts!',
-                'event-1':"Join us for a casual meet and greet over freshly brewed coffee (free coffee!). Bring your laptop. It's the perfect opportunity to connect with new friends and network in a relaxed setting.",
-                'event-mid':'Hackathon preparations',
-                'event-2':'Submit and vote on ideas for the next hackathon, and form teams!',
-                'event-end':'Wrap-up!',
-                'event-3':'Key-Notes for upcoming hackathon, pictures, thanks to sponsors, general notes.',
+                'timeline-title': 'Timeline',
+                'event-start': 'Event Starts!',
+                'event-1': "Join us for a casual meet and greet over freshly brewed coffee (free coffee!). Bring your laptop. It's the perfect opportunity to connect with new friends and network in a relaxed setting.",
+                'event-mid': 'Hackathon preparations',
+                'event-2': 'Submit and vote on ideas for the next hackathon, and form teams!',
+                'event-end': 'Wrap-up!',
+                'event-3': 'Key-Notes for upcoming hackathon, pictures, thanks to sponsors, general notes.',
+                'promo-coffee':'Free Coffee! first 12 people'
             },
             'ko': {
                 'FCC': 'FCC 부산',
@@ -362,14 +394,14 @@
                 'event-time': '오후 3시~오후 6시',
                 'event-place': '카페위드',
                 'sponsor-1': '스폰서: 부산글로벌도시재단',
-                'timeline-title':'시간표',
-                'event-start':'이벤트가 시작됩니다!',
-                'event-1':'갓 내린 커피(무료 커피!)를 마시며 캐주얼한 만남과 인사를 나누세요. 노트북을 가져오세요. 편안한 분위기에서 새로운 친구들과 교류하고 인맥을 쌓을 수 있는 완벽한 기회입니다.',
-                'event-mid':'해커톤 준비하기',
-                'event-2':'이디어를 제출하고 투표하고 다음 해커톤에 참가할 팀을 구성하세요!',
-                'event-end':'이벤트 종료 노트',
-                'event-3':'다가오는 해커톤의 키노트, 사진, 후원사에 대한 감사 인사, 일반 참고 사항.',
-                
+                'timeline-title': '시간표',
+                'event-start': '이벤트가 시작됩니다!',
+                'event-1': '갓 내린 커피(무료 커피!)를 마시며 캐주얼한 만남과 인사를 나누세요. 노트북을 가져오세요. 편안한 분위기에서 새로운 친구들과 교류하고 인맥을 쌓을 수 있는 완벽한 기회입니다.',
+                'event-mid': '해커톤 준비하기',
+                'event-2': '이디어를 제출하고 투표하고 다음 해커톤에 참가할 팀을 구성하세요!',
+                'event-end': '이벤트 종료 노트',
+                'event-3': '다가오는 해커톤의 키노트, 사진, 후원사에 대한 감사 인사, 일반 참고 사항.',
+                'promo-coffee':'무료 커피! 선착순 12명'
             }
         };
 
@@ -434,17 +466,16 @@
                 element.classList.add('rainbow');
                 element.classList.add('rainbow-bg-reverse');
             });
-            
+
             var elements = document.querySelectorAll('.content');
             elements.forEach(function (element) {
                 element.classList.add('rainbow-bg-reverse');
             });
 
             document.querySelector('header').classList.add('rainbow-bg-reverse');
-            
+
             document.body.classList.add('rainbow-bg');
         }
-
 
     </script>
 
