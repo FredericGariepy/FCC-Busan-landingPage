@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Free Code Camp Busan!">
+    <meta property="og:title" content="FCC BUSAN">
     <meta property="og:description" content="Join us for free coffee, monthly hackathons. Connect with new friends and network in a relaxed setting.">
     <meta property="og:image" content="https://social.hays.com/wp-content/uploads/2017/07/00921_RGB_Digital-e1499698934535.jpg"> 
     <meta property="og:url" content="https://fredericgariepy.github.io/">
@@ -13,9 +13,19 @@
     
     <title>FCC BUSAN</title>
     <style>
+        /* Define custom colors as CSS variables */
+        :root {
+            --primary-color: #ff6600; /* Orange */
+            --secondary-color: #ffffff; /* White */
+            --accent-color: #ffa76c; /* Light Orange */
+            --text-color: #333333; /* Dark Gray */
+            --background-color: #fff9f4; /* Light Peach */
+            --border-color: #ff6600; /* Orange */
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff9f4;
+            background-color: var(--background-color);
             margin: 0;
             padding: 0;
         }
@@ -23,7 +33,7 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: #fff;
+            background-color: var(--secondary-color);
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin: 20px auto;
@@ -33,7 +43,7 @@
         hr {
             border: none;
             height: 2px;
-            background-color: #ff6600;
+            background-color: var(--primary-color);
             margin: 20px 0;
         }
 
@@ -42,11 +52,10 @@
             background-color: transparent;
         }
 
-
         .logo {
             font-size: 24px;
             font-weight: bold;
-            color: #333;
+            color: var(--text-color);
             text-decoration: none;
             margin-bottom: 10px;
             display: inline-block;
@@ -54,13 +63,13 @@
 
         h2 {
             font-size: 20px;
-            color: #555;
+            color: var(--text-color);
             margin: 10px 0;
         }
 
         nav a {
             margin-left: 10px;
-            color: #333;
+            color: var(--text-color);
             text-decoration: none;
         }
 
@@ -70,13 +79,13 @@
 
         .countdown {
             font-size: 2rem;
-            color: #ff6600;
+            color: var(--primary-color);
         }
 
         .important {
             font-size: 2rem;
             font-weight: 700;
-            color: #222222;
+            color: var(--text-color);
             margin-top: 20px;
         }
 
@@ -84,17 +93,14 @@
             list-style: none;
             padding: 0;
             margin: 20px auto;
-            /* Updated */
             max-width: 600px;
             text-align: center;
-            /* Added */
         }
-
 
         .event {
             display: flex;
             margin-bottom: 20px;
-            border: 1px solid #ff6600;
+            border: 1px solid var(--border-color);
         }
 
         .timestamp {
@@ -104,12 +110,11 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            /* Center vertically */
         }
 
         .content {
             flex: 1;
-            background-color: #fff;
+            background-color: var(--secondary-color);
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -121,45 +126,42 @@
         }
 
         .description {
-            line-height: 1.5; /* Adjust line height as needed */
-            margin-top: 10px; /* Add margin to the top */
-            margin-bottom: 10px; /* Add margin to the bottom */
-            padding: 5px; /* Add padding */
+            line-height: 1.5;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px;
         }
-
 
         .rainbow {
             animation: rainbowAnimation 4s linear infinite;
         }
-        
+
         @keyframes rainbowAnimation {
             0% {
                 color: #ff0000; /* Red */
             }
-        
+
             20% {
                 color: #ff7f00; /* Orange */
             }
-        
+
             40% {
                 color: #ffff00; /* Yellow */
             }
-        
+
             60% {
                 color: #00ff00; /* Green */
             }
-        
+
             80% {
                 color: #0000ff; /* Blue */
             }
-        
+
             100% {
                 color: #8a2be2; /* Indigo */
             }
         }
-        
 
-        
         .rainbow-bg {
             background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
             background-size: 1500% 1500%;
@@ -171,7 +173,7 @@
             background-size: 1500% 1500%;
             animation: rainbowAnimation-bg 10s linear infinite;
         }
-        
+
         @keyframes rainbowAnimation-bg {
             0% {
                 background-position: 0% 50%;
@@ -187,17 +189,17 @@
             font-weight: 700;
             display: inline-block;
             padding: 10px 20px;
-            background-color: #ff6600;
-            color: #ffffff;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
             text-decoration: none;
             margin-top: 1.5rem;
-            border: 2px solid #ffa76c;
+            border: 2px solid var(--accent-color);
             border-radius: 5px;
             transition: background-color 0.5s ease, border-color 0.5s ease;
         }
 
         .action-button:hover {
-            color: white;
+            color: var(--secondary-color);
             background-color: #ff6363;
             border-color: #ff6363;
             text-decoration: none;
@@ -219,15 +221,13 @@
             background-color: #0056b3;
         }
 
-
         .sponsor-info {
             font-size: 20px;
-            color: #555;
+            color: var(--text-color);
         }
 
         .sponsor-info a {
             text-decoration: none;
-            /* Remove underline decoration */
         }
 
         .btn-orange-outline {
@@ -236,18 +236,17 @@
             display: inline-block;
             padding: 10px 20px;
             background-color: transparent;
-            color: #ff6600;
+            color: var(--primary-color);
             text-decoration: none;
-            border: 2px solid #ff6600;
+            border: 2px solid var(--primary-color);
             border-radius: 5px;
             transition: background-color 0.5s ease, border-color 0.5s ease;
-            /* Add transition for background and border color */
         }
 
         .btn-orange-outline:hover {
-            color: white;
-            background-color: #ff6600;
-            border-color: #ffa76c;
+            color: var(--secondary-color);
+            background-color: var(--primary-color);
+            border-color: var(--accent-color);
             text-decoration: none;
         }
 
@@ -257,22 +256,18 @@
             display: inline-block;
             padding: 10px 20px;
             background-color: transparent;
-            color: #ff6600;
+            color: var(--primary-color);
             text-decoration: none;
-            border: 2px solid #ff6600;
+            border: 2px solid var(--primary-color);
             border-radius: 5px;
             transition: background-color 0.5s ease, border-color 0.5s ease;
-            /* Add transition for background and border color */
         }
 
         .btn-orange-outline-sm:hover {
-            color: white;
-            background-color: #ff6600;
-            border-color: #ffa76c;
-            /* Adjust border color on hover */
+            color: var(--secondary-color);
+            background-color: var(--primary-color);
+            border-color: var(--accent-color);
         }
-
-        
     </style>
 
 </head>
@@ -319,14 +314,14 @@
                 </div>
             </div>
             <div class="event">
-                <div class="timestamp">04:00 PM</div>
+                <div class="timestamp">04:00 AM</div>
                 <div class="content">
                     <div class="title lang" id="event-mid"></div>
                     <div class="description lang" id="event-2"></div>
                 </div>
             </div>
             <div class="event">
-                <div class="timestamp">05:30 PM</div>
+                <div class="timestamp">05:30 AM</div>
                 <div class="content">
                     <div class="title lang" id="event-end"></div>
                     <div class="description lang" id="event-3"></div>
